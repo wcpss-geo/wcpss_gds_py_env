@@ -106,7 +106,7 @@ RUN conda config --add channels esri \
     -follow -type f -name '*.js' ! -name '*.min.js' -delete
 
 # pip libraries
-ADD ./wcpss_gds_py_pip.txt ./
+ADD https://raw.githubusercontent.com/wcpss-geo/wcpss_gds_py_env/main/conda/wcpss_gds_py_pip.txt ./
 RUN pip install -r wcpss_gds_py_pip.txt \
  && pip cache purge \
  && rm -rf /home/$NB_USER/.cache/pip \
