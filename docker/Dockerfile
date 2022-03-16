@@ -11,7 +11,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 #--- Python ---#
 
 RUN conda config --add channels esri \
-    && conda config --add channels pyviz \
+    && conda config --add channels conda-forge \
     && conda config --add channels pyviz \
     && conda config --set channel_priority strict \
     && mamba install --freeze-installed --yes --quiet \
