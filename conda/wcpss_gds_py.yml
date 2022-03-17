@@ -15,7 +15,7 @@ dependencies:
   - certifi
   - openssl
   - conda-forge::blas[build=openblas]
-  - arcgis==2.0.0
+  # - arcgis==2.0.0
   - black==21.9b0
   - bokeh==2.4.1
   - boto3==1.18.63

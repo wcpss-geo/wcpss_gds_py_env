@@ -10,13 +10,12 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
 #--- Python ---#
 
-RUN conda config --add channels esri \
-    && conda config --add channels conda-forge \
+RUN conda config --add channels conda-forge \
     && conda config --add channels pyviz \
     && conda config --set channel_priority strict \
     && mamba install --freeze-installed --yes --quiet \
      'conda-forge::blas=*=openblas' \
-     'arcgis==2.0.0' \
+    #  'arcgis==2.0.0' \
      'black==21.9b0' \
      'bokeh==2.4.1' \
      'boto3==1.18.63' \
