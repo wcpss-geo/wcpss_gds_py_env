@@ -15,7 +15,7 @@ RUN conda config --add channels conda-forge \
     && conda config --set channel_priority strict \
     && mamba install --freeze-installed --yes --quiet \
      'conda-forge::blas=*=openblas' \
-    #  'arcgis==2.0.0' \
+    #  'arcgis==2.0.0' \ # Moved to pip
      'black==21.9b0' \
      'bokeh==2.4.1' \
      'boto3==1.18.63' \
@@ -25,6 +25,7 @@ RUN conda config --add channels conda-forge \
      'contextily==1.2.0' \
      'cython==0.29.24' \
      'dask==2021.9.1' \
+     #'dask-geopandas==0.1.0' \ # Wait come out of alpha
      #'dask-kubernetes' \
      'dask-ml==1.9.0' \
      'datashader==0.13.0' \
@@ -105,7 +106,7 @@ RUN conda config --add channels conda-forge \
     -follow -type f -name '*.js' ! -name '*.min.js' -delete
 
 # pip libraries
-ADD https://raw.githubusercontent.com/wcpss-geo/wcpss_gds_py_env/main/conda/wcpss_gds_py_pip.txt ./
+ADD ./wcpss_gds_py_pip.txt ./
 RUN pip install -r wcpss_gds_py_pip.txt \
  && pip cache purge \
  && rm -rf /home/$NB_USER/.cache/pip \
