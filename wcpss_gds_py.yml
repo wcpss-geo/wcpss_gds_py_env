@@ -93,4 +93,4 @@ dependencies:
   - xlrd==2.0.1
   - xlsxwriter==3.0.1
 gds_env_version: 7.0
-wcpss_gds_env_version: 1.0
+wcpss_gds_env_version: 1.1

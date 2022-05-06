@@ -152,7 +152,7 @@ RUN apt-get update \
 
 # Set version
 ENV GDS_ENV_VERSION "7.0"
-ENV WCPSS_GDS_ENV_VERSION "1.0"
+ENV WCPSS_GDS_ENV_VERSION "1.1"
 
 # Switch back to user to avoid accidental container runs as root
 USER $NB_UID
