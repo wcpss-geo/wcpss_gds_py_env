@@ -1,5 +1,6 @@
 ablog==0.10.20
 arcgis==1.9.1
+cartoframes==1.2.4
 download==0.3.5
 geoalchemy2==0.9.4
 gpxpy==1.4.2

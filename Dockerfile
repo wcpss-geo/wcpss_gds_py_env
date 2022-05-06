@@ -91,6 +91,7 @@ RUN conda config --add channels conda-forge \
      'seaborn==0.11.2' \
      'spatialpandas==0.4.3' \
      'sqlalchemy==1.4.25' \
+     'sshtunnel==0.1.3' \
      'statsmodels==0.13.0' \
      'tabulate==0.8.9' \
      'urbanaccess==0.2.2' \
